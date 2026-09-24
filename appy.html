@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PocketSmart AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f5ff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4b4ded;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      background: #4b4ded;
+      color: white;
+      font-size: 16px;
+    }
+
+    #answer {
+      margin-top: 20px;
+      text-align: left;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>🤖 PocketSmart AI</h1>
+
+    <p>Your smart AI assistant</p>
+
+    <textarea id="question"
+      placeholder="Ask PocketSmart AI anything..."></textarea>
+
+    <br>
+
+    <button onclick="askAI()">Ask AI</button>
+
+    <div id="answer"></div>
+  </div>
+
+  <script>
+    function askAI() {
+      const question = document.getElementById("question").value;
+
+      if (question.trim() === "") {
+        document.getElementById("answer").innerText =
+          "Please type a question first.";
+        return;
+      }
+
+      document.getElementById("answer").innerText =
+        "Your question was received! AI connection will be added next.";
+    }
+  </script>
+
+</body>
+</html>
